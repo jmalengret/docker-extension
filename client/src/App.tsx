@@ -43,7 +43,7 @@ function App() {
             environmentID
               ? `--environment https://api.getpostman.com/environments/${environmentID}?apikey=${apiKey}`
               : ""
-          } -r htmlextra --reporter-htmlextra-template /file.hbs --reporter-htmlextra-export /tmp/report.html"`,
+          } -r htmlextra --reporter-htmlextra-template /file.hbs --reporter-htmlextra-export /tmp/report.html --insecure"`,
         ]);
       } catch {
         console.log("There are some errors in tests");
@@ -201,7 +201,7 @@ function App() {
             <>
               <TextField
                 id="apikey-input"
-                label={["Postman API key"]}
+                label={["Postman API key test"]}
                 placeholder="e.g. PMAK-xxx-xxxx-xxxx-xxxx"
                 error={!!apikeyError}
                 helperText={apikeyError ? apikeyError : ""}
