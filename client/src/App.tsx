@@ -113,7 +113,7 @@ function App() {
       };
 
       return fetch(
-        "https://api.getpostman.com/collections",
+        "https://api.getpostman.com/collections?workspace=3e51b45d-7aab-4811-8c01-b7fde42fe18f",
         requestOptions
       ).then((response) => response.json());
     } catch (err) {
@@ -133,7 +133,7 @@ function App() {
       };
 
       return fetch(
-        "https://api.getpostman.com/environments",
+        "https://api.getpostman.com/environments?workspace=3e51b45d-7aab-4811-8c01-b7fde42fe18f",
         requestOptions
       ).then((response) => response.json());
     } catch (err) {
